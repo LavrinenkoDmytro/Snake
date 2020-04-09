@@ -10,8 +10,17 @@ namespace Snake
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("HelloGit");
+            Draw(1, 2, '*');
+
+            Draw(6, 8, '$');
+
             Console.ReadLine();
+        }
+
+        static void Draw(int x1, int y1, char simv)
+        {
+            Console.SetCursorPosition(x1, y1);
+            Console.Write(simv);
         }
     }
 }
