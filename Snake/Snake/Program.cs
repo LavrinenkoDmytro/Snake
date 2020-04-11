@@ -12,12 +12,16 @@ namespace Snake
         {
             Point p1 = new Point(15, 10, '*');
             Point p2 = new Point(1, 5, '#');
-            p2 = p1;
+            
 
-            //p1.Draw();
-            //p2.Draw();
-            p1.Draw2();
-            p2.Draw2();
+            List<Point> point = new List<Point>();
+            point.Add(p1);
+            point.Add(p2);
+
+            foreach(Point n in point)
+            {             
+                n.Draw2();
+            }
 
             Console.ReadLine();
         }
