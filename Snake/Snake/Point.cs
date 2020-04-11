@@ -27,6 +27,12 @@ namespace Snake
             Console.Write(sim);
         }
 
+        // It's my second function Draw2 for better understand lesson_5 (how working RAM).
+        public void Draw2()
+        {
+            Console.WriteLine("Вивод на екран значений x, y, sim :: " + x + ", " + y + ", " + sim);
+        }
+
     }
 
 }
