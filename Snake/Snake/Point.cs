@@ -10,21 +10,45 @@ namespace Snake
     {
         public int x;
         public int y;
-        public char sim;
+        public char sym;
 
-        public Point(int x, int y, char sim)
+        public Point(int x, int y, char sym)
         {
             this.x = x;
             this.y = y;
-            this.sim = sim;
+            this.sym = sym;
         }
 
         public Point() { }
 
+        public Point(Point p)
+        {
+            x = p.x;
+            y = p.y;
+            sym = p.sym;
+        }
+
+        public void Move(int offset, Direction direction)
+        {
+            if (direction == Direction.RIGHT)
+                x += offset;
+            if (direction == Direction.LEFT)
+                x -= offset;
+            if (direction == Direction.UP)
+                y += offset;
+            if (direction == Direction.DOWN)
+                y -= offset;
+        }
+
         public void Draw()
         {
             Console.SetCursorPosition(x, y);
-            Console.Write(sim);
+            Console.Write(sym);
+        }
+
+        public override string ToString()
+        {
+            return x + ", " + y + ", " + sym;
         }
 
     }

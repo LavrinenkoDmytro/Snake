@@ -12,6 +12,7 @@ namespace Snake
         {
             Console.SetWindowSize(80, 25);
 
+            // Draw walls;
             HorizontalLine horizontalLeftLine = new HorizontalLine(1, 80, 1, '+');
             HorizontalLine horizontalRightLine = new HorizontalLine(1, 80, 25, '+');
             VerticalLine verticalHightLine = new VerticalLine(1, 1, 25, '+');
@@ -20,8 +21,11 @@ namespace Snake
             horizontalRightLine.Draw();
             verticalHightLine.Draw();
             verticalDownLine.Draw();
-            Point p = new Point(10, 10, '#');
-            p.Draw();
+
+            //Draw snake;
+            Point p = new Point(10, 10, '*');
+            Snake snake = new Snake(p, 4, Direction.RIGHT);
+            snake.Draw();
             Console.ReadLine();
         }
 
